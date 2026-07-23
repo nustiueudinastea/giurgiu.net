@@ -1,4 +1,4 @@
-baseurl = "https://giurgiu.io/"
+baseurl = "https://giurgiu.net/"
 builddrafts = true
 canonifyurls = true
 contentdir = "content"
@@ -6,7 +6,7 @@ languageCode = "en-US"
 layoutdir = "layouts"
 publishdir = "public"
 author = "Alex Giurgiu"
-title = "giurgiu.io"
+title = "giurgiu.net"
 disqusshortname = ""
 pluralizelisttitles = false
 
@@ -24,7 +24,7 @@ highlightjs = true
 progressively = true
 lang = "en"
 github = "nustiueudinastea"
-email = "alex@giurgiu.io"
+email = "alex@giurgiu.net"
 linkedin = "alexgiurgiu"
 twitter = "nustiudinastea"
 social_banner = "img/banner.png"
