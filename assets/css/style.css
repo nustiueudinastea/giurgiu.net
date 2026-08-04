@@ -1,6 +1,8 @@
 :root {
   --background: #fcfaf7;
   --foreground: #000;
+  /* Ink colour the dithered photograph is tinted with. */
+  --ink: #1f3b4d;
   --font-secondary: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
@@ -29,6 +31,13 @@ body {
 }
 
 .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-brand {
   display: flex;
   align-items: center;
 }
@@ -68,11 +77,42 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: max(24rem, calc(80vh - 2.3rem));
+  min-height: max(24rem, calc(80vh - 2.3rem));
+  padding: 2rem 0;
 }
 
+/* --- Dithered photograph ------------------------------------------------ */
+
+/* The photo stays inside the text column, no wider than the prose. */
+.photo {
+  margin: 0 0 2.25rem;
+}
+
+/*
+  Two stacked blend modes recolour the 1-bit black-and-white PNG:
+  `screen` on the image turns its black pixels into the frame's ink colour,
+  `multiply` on the frame lets the paper background show through the whites.
+*/
+.photo__frame {
+  height: clamp(12rem, 34vh, 24rem);
+  background: var(--ink);
+  mix-blend-mode: multiply;
+}
+
+.photo__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  mix-blend-mode: screen;
+}
+
+/* --- Intro -------------------------------------------------------------- */
+
 .description h1 {
-  margin: 0.67em 0;
+  margin: 0 0 0.6rem;
+  font-size: 1.6rem;
 }
 
 .description p {
@@ -87,9 +127,8 @@ main {
 
 .contacts {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding-top: 3rem;
+  align-items: center;
+  gap: 1.4rem;
 }
 
 .contact-link {
@@ -103,8 +142,8 @@ main {
 }
 
 .contact-link svg {
-  width: 32px;
-  height: 32px;
+  width: 22px;
+  height: 22px;
   fill: currentColor;
 }
 
