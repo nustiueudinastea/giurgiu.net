@@ -1,2 +1,4 @@
 https://giurgiu.io/* https://giurgiu.net/:splat 301!
 https://www.giurgiu.io/* https://giurgiu.net/:splat 301!
+/count https://collect.giurgiu.net/count 200!
+/count.js https://collect.giurgiu.net/count.js 200!
