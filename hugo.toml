@@ -1,0 +1,16 @@
+baseURL = "https://giurgiu.net/"
+locale = "en-US"
+title = "Alex Giurgiu"
+copyright = "Alex Giurgiu"
+cleanDestinationDir = true
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+
+[params]
+description = "The personal website of Alex Giurgiu"
+email = "alex@giurgiu.net"
+
+[params.social]
+github = "nustiueudinastea"
+matrix = "@alex:giurgiu.net"
+twitter = "nustiudinastea"
